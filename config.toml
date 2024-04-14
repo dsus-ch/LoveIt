@@ -5,24 +5,16 @@
 # 菜单配置
 [menu]
   [[menu.main]]
-    weight = 4
-    identifier = "posts"
+    weight = 3
+    identifier = "aboutme"
     # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
     pre = ""
     # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
     post = ""
-    name = "文章"
-    url = "/posts/"
+    name = "关于我"
+    url = "/aboutme/"
     # 当你将鼠标悬停在此菜单链接上时, 将显示的标题
-    title = ""
-  [[menu.main]]
-    weight = 3
-    identifier = "discusses"
-    pre = ""
-    post = ""
-    name = "谈论"
-    url = "/discusses/"
-    title = ""
+    title = "aboutme"
   [[menu.main]]
     weight = 2
     identifier = "categories"
@@ -33,11 +25,11 @@
     title = ""
   [[menu.main]]
     weight = 1
-    identifier = "recommends"
+    identifier = "discusses"
     pre = ""
     post = ""
-    name = "推荐"
-    url = "/recommends/"
+    name = "谈论"
+    url = "/discusses/"
     title = ""
 
 [params]
@@ -51,7 +43,7 @@
   # ["sha256", "sha384", "sha512", "md5"]
   # 哪种哈希函数用来 SRI, 为空时表示不使用 SRI
   # ["sha256", "sha384", "sha512", "md5"]
-  fingerprint = ""
+  fingerprint = "md5"
   # date format
   # 日期格式
   dateFormat = "2006-01-02"
@@ -99,7 +91,7 @@
     enable = true
     # Custom content (HTML format is supported)
     # 自定义内容 (支持 HTML 格式)
-    custom = "create by @thehanged"
+    custom = "© 2023 thehanged. All rights reserved."
     # whether to show Hugo and theme info
     # 是否显示 Hugo 和主题信息
     hugo = false
@@ -202,11 +194,11 @@
   [params.home]
     # amount of RSS pages
     # RSS 文章数目
-    rss = 10
+    rss = 0
     # Home page profile
     # 主页个人信息
     [params.home.profile]
-      enable = true
+      enable = false
       # Gravatar Email for preferred avatar in home page
       # Gravatar 邮箱，用于优先在主页显示的头像
       gravatarEmail = ""
@@ -215,10 +207,10 @@
       avatarURL = ""
       # title shown in home page (HTML format is supported)
       # 主页显示的网站标题 (支持 HTML 格式)
-      title = ""
+      title = "About Me"
       # subtitle shown in home page (HTML format is supported)
       # 主页显示的网站副标题 (允许 HTML 格式)
-      subtitle = ""
+      subtitle = "thehanged"
       # whether to use typeit animation for subtitle
       # 是否为副标题显示打字机动画
       typeit = true
@@ -234,11 +226,11 @@
       enable = true
       # special amount of posts in each home posts page
       # 主页每页显示文章数量
-      paginate = 6
+      paginate = 10
   # Social config in home page
   # 主页的社交信息设置
   [params.social]
-    GitHub = ""
+    GitHub = "dsus-ch"
     Linkedin = ""
     Twitter = ""
     Instagram = ""
@@ -328,10 +320,10 @@
     twemoji = false
     # whether to enable lightgallery
     # 是否使用 lightgallery
-    lightgallery = false
+    lightgallery = true
     # whether to enable the ruby extended syntax
     # 是否使用 ruby 扩展语法
-    ruby = true
+    ruby = false
     # whether to enable the fraction extended syntax
     # 是否使用 fraction 扩展语法
     fraction = true
@@ -340,7 +332,7 @@
     fontawesome = true
     # whether to show link to Raw Markdown content of the content
     # 是否显示原始 Markdown 文档内容的链接
-    linkToMarkdown = true
+    linkToMarkdown = false
     # whether to show the full text content in RSS
     # 是否在 RSS 中显示全文内容
     rssFullText = false
@@ -418,15 +410,15 @@
       Pinterest = false
       Tumblr = false
       HackerNews = true
-      Reddit = false
+      Reddit = true
       VK = false
       Buffer = false
       Xing = false
-      Line = true
+      Line = false
       Instapaper = false
       Pocket = false
       Flipboard = false
-      Weibo = true
+      Weibo = false
       Blogger = false
       Baidu = false
       Odnoklassniki = false
